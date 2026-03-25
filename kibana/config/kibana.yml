@@ -1,0 +1,8 @@
+# elasticsearch.hosts задаётся через ELASTICSEARCH_HOSTS в docker-compose
+server.host: "0.0.0.0"
+
+telemetry.optIn: false
+newsfeed.enabled: false
+home.disableWelcomeScreen: true
+
+uiSettings.overrides.defaultRoute: "/app/discover"

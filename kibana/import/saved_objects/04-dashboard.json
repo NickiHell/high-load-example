@@ -1,0 +1,31 @@
+{
+  "attributes": {
+    "title": "Positions",
+    "description": "Гистограмма по @timestamp",
+    "panelsJSON": "[{\"version\":\"8.15.0\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":20,\"i\":\"1\"},\"panelIndex\":\"1\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"8.15.0\",\"type\":\"search\",\"gridData\":{\"x\":0,\"y\":20,\"w\":48,\"h\":32,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"}]",
+    "optionsJSON": "{\"hidePanelTitles\":false,\"useMargins\":true}",
+    "version": 1,
+    "timeRestore": true,
+    "timeTo": "now",
+    "timeFrom": "now-15m",
+    "refreshInterval": {
+      "pause": false,
+      "value": 5000
+    },
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+    }
+  },
+  "references": [
+    {
+      "name": "panel_1",
+      "id": "positions-histogram",
+      "type": "visualization"
+    },
+    {
+      "name": "panel_2",
+      "id": "positions-saved-search",
+      "type": "search"
+    }
+  ]
+}

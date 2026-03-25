@@ -1,0 +1,13 @@
+{
+  "attributes": {
+    "title": "positions-*",
+    "timeFieldName": "@timestamp",
+    "fields": "[]",
+    "fieldAttrs": "{}",
+    "fieldFormatMap": "{}",
+    "runtimeFieldMap": "{}",
+    "sourceFilters": "[]",
+    "typeMeta": "{}"
+  },
+  "references": []
+}

@@ -1,0 +1,28 @@
+{
+  "attributes": {
+    "title": "Position events",
+    "description": "",
+    "columns": [
+      "@timestamp",
+      "event_type",
+      "position_id",
+      "latitude",
+      "longitude",
+      "external_ref",
+      "recorded_at"
+    ],
+    "sort": [["@timestamp", "desc"]],
+    "grid": {},
+    "hideChart": false,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "id": "positions-dataview",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ]
+}
