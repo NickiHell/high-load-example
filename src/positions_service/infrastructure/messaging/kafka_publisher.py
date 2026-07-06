@@ -23,7 +23,7 @@ class KafkaPositionEventPublisher:
                 "recorded_at": event.recorded_at.isoformat(),
                 "external_ref": event.external_ref,
             }
-            await self._producer.send_and_wait(
+            await self._producer.send_and_wait(  # type: ignore[union-attr]  # aiokafka missing stubs
                 self._topic,
                 json.dumps(payload).encode("utf-8"),
             )

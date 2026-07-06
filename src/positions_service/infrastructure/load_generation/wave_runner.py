@@ -19,12 +19,11 @@ POSITIONS_PATH = "/api/v1/positions"
 def _format_wave_error(exc: BaseException) -> str:
     if isinstance(exc, httpx.HTTPStatusError):
         body = ""
-        if exc.response is not None:
-            try:
-                body = exc.response.text[:400]
-            except OSError, RuntimeError, ValueError:
-                body = ""
-        code = exc.response.status_code if exc.response else "?"
+        try:
+            body = exc.response.text[:400]
+        except OSError, RuntimeError, ValueError:
+            body = ""
+        code = exc.response.status_code
         return f"{exc.__class__.__name__} {code} {body!r}".strip()
     if isinstance(exc, httpx.RequestError):
         return f"{exc.__class__.__name__} {exc.request.method!s} {exc.request.url!s} — {exc!r}"

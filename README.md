@@ -1,7 +1,7 @@
 # positions-service
 
 Демо-сервис приёма геокоординат: **PostgreSQL**, **Kafka**, **Prometheus / Grafana**, **ELK**.  
-**Python 3.14** · **FastAPI** · DDD-слои · **uv** · **ruff** · **mypy strict**
+**Python 3.14** · **FastAPI** · DDD-слои · **uv** · **ruff** · **basedpyright strict**
 
 ---
 
@@ -85,11 +85,11 @@ OpenAPI 3.1, Grafana (RPS, статусы, p95, in-flight), Kibana (Kafka → Lo
 ```bash
 uv run ruff check src tests alembic
 uv run ruff format --check src tests alembic
-uv run mypy src
+uv run basedpyright src
 uv run pytest tests/unit -v
 ```
 
-Pre-commit: [`.pre-commit-config.yaml`](.pre-commit-config.yaml) — в тон с CI.
+Pre-commit: [`.pre-commit-config.yaml`](.pre-commit-config.yaml) — в тон с CI (basedpyright вместо mypy).
 
 ```bash
 uv sync --all-groups && uv run pre-commit install
@@ -100,4 +100,4 @@ uv run pre-commit run --all-files
 
 ## CI
 
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) — ruff, mypy, pytest, сборка Docker-образа.
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) — ruff, basedpyright, pytest, сборка Docker-образа.

@@ -19,9 +19,9 @@ repos:
         types: [python]
         files: ^(src|tests|alembic)/
 
-      - id: mypy
-        name: mypy
-        entry: uv run mypy
+      - id: basedpyright
+        name: basedpyright
+        entry: uv run basedpyright
         args: [src]
         language: system
         pass_filenames: false
