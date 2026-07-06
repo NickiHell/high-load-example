@@ -1,7 +1,7 @@
 # positions-service
 
 Демо-сервис приёма геокоординат: **PostgreSQL**, **Kafka**, **Prometheus / Grafana**, **ELK**.  
-**Python 3.12** · **FastAPI** · DDD-слои · **uv** · **ruff** · **mypy strict**
+**Python 3.14** · **FastAPI** · DDD-слои · **uv** · **ruff** · **mypy strict**
 
 ---
 

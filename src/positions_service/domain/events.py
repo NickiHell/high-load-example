@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime
-from typing import TypeAlias
 from uuid import UUID
 
 
@@ -15,4 +14,4 @@ class PositionRecorded:
     external_ref: str | None
 
 
-DomainEvent: TypeAlias = PositionRecorded
+type DomainEvent = PositionRecorded

@@ -3,7 +3,7 @@ name = "positions-service"
 version = "0.1.0"
 description = "Демо high-load микросервис фиксации координат (DDD, FastAPI, Kafka, PostgreSQL)"
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.14,<3.15"
 dependencies = [
   "fastapi>=0.115.0",
   "uvicorn[standard]>=0.32.0",
@@ -38,7 +38,7 @@ build-backend = "hatchling.build"
 package-dir = { "" = "src" }
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py314"
 line-length = 100
 src = ["src", "tests"]
 
@@ -86,7 +86,7 @@ max-complexity = 10
 quote-style = "double"
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.14"
 strict = true
 warn_unused_ignores = true
 show_error_codes = true

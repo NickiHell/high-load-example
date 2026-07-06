@@ -22,7 +22,7 @@ def _format_wave_error(exc: BaseException) -> str:
         if exc.response is not None:
             try:
                 body = exc.response.text[:400]
-            except (OSError, RuntimeError, ValueError):
+            except OSError, RuntimeError, ValueError:
                 body = ""
         code = exc.response.status_code if exc.response else "?"
         return f"{exc.__class__.__name__} {code} {body!r}".strip()
